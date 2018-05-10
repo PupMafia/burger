@@ -29,11 +29,15 @@ function objToSql(ob) {
 
 let orm = {
   all: function(tableInput, cb) {
+    console.log("hello orm2" + tableInput);
     let queryString = "SELECT * FROM " + tableInput + ";";
+    console.log(queryString);
     connection.query(queryString, function(err, result) {
       if (err) {
         throw err;
+        console.log(err);
       }
+      console.log(result);
       cb(result);
     });
   },
