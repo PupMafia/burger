@@ -1,0 +1,23 @@
+<h1>Welcome to Bob's Burgers!</h1>
+
+<h2>Burgers up for grabs!</h2>
+
+<ul>
+    {{#each burgers}}
+        {{#unless devoured}}
+            {{> burgers/burger-block devoured=true}}
+        {{/unless}}
+    {{/each}}
+</ul>
+
+<h2>Gone all too soon!</h2>
+
+<ul>
+    {{#each burgers}}
+        {{#if devoured}}
+</ul>
+
+<h2>Make-a-burg-omatic!</h2>
+<form class="create-form">
+    
+</form>
